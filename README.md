@@ -7,8 +7,8 @@
  - FIRST:
 
 	Change USER and PASSWORD variables inside script to your own!
-	##Shodan user credentials (inside single quotes!)
-	##YOU MUST CHANGE THIS WITH YOUR OWN USER AND PASSWORD!
+	"#Shodan user credentials (inside single quotes!)"
+	"#YOU MUST CHANGE THIS WITH YOUR OWN USER AND PASSWORD!"
 	USER='YourShodanUSER'
 	PASSWORD='YourShodanPASSWORD'
 
