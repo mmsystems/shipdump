@@ -16,4 +16,3 @@
 
          ./sipdump.sh 'port:8080 country:es admin/admin'
          ./sipdump.sh 'city:Madrid port:21 vsftpd'
-         ./sipdump.sh 'port:23 UNITED STATES GOVERNMENT COMPUTER'
