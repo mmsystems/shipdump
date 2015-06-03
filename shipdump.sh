@@ -87,7 +87,7 @@ search(){
 
 	IPS=$(strings /tmp/result_shodan_download | grep '/host/' | awk -F\" '{ print $4 }' | awk -F/ '{ print $3 }' | uniq)
 
-	#When no find more IP's, try three times. If no results, exit script
+	#When no find more IP's, try six times. If no results, exit script
 	if [ "$IPS" == "" ]
 		then
 			let ATTEMPT=$ATTEMPT+1
