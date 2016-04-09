@@ -67,7 +67,7 @@ login() {
 		-q \
 		-O /tmp/login \
 		https://account.shodan.io/login
-	if [ -z "$(grep $USER /tmp/login)" ]
+	if [ -z "$(grep 'Show API Key' /tmp/login)" ]
 		then
 			echo -e "["$redC"-"$basecolor"] Login ERROR"
 			echo -e "\n"$redC" * "$white"Edit the script "$redC"$0"$basecolor""$white" with a correct USER and PASSWORD for shodan.io"$basecolor"\n"
@@ -143,7 +143,7 @@ echo -e "["$yellow"i"$basecolor"] Searching"
 search
 
 #Extract total results and save it in NUM_RESULTS
-NUM_RESULTS=$(awk '/Showing results/ { print $8 }' /tmp/result_shodan_download | awk -F\< '{ print $1 }' | sed 's/,//g')
+NUM_RESULTS=$(awk '/Total results/ { print $4 }' /tmp/result_shodan_download | awk -F\< '{ print $1 }' | sed 's/,//g')
 echo -e ""$reverse""$white"  TOTAL RESULTS: "$basecolor""$greenC"  $NUM_RESULTS  "$basecolor""
 
 #IP results counter
